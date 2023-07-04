@@ -11,6 +11,7 @@ const flightSchema = new mongoose.Schema({
 
   flightNo: {
     type: Number,
+    required: true,
     min: 10,
     max: 9999,
   },
@@ -20,5 +21,9 @@ const flightSchema = new mongoose.Schema({
     default: function () {
       return new Date().getFullYear();
     },
+    min:2023
   },
 });
+
+// Compile the schema into a model and export it
+module.exports = mongoose.model('Flight', flightSchema);
