@@ -4,19 +4,19 @@
   <thead>
     <tr>
       <th>Airline</th>
-      <th>Flight <br>No</th>
+      <th>Flight <br />No</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <% flights.forEach(function(f) { %>
-      <tr>
-        <td><%= f.airline %></td>
-        <td><%= f.flightNo %></td>
-        <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
-      </tr>
-      <% }); %>
-    </tbody>
-  </table>
-  
+    <tr>
+      <td><%= f.airline %></td>
+      <td><%= f.flightNo %></td>
+      <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+
 <%- include('../partials/footer') %>
